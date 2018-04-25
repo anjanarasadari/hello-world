@@ -34,11 +34,11 @@ public static void display_output(String s[]){
 		for(int i=0;i<s[0].length();i++){
 			char ch0 =s[0].charAt(s[0].length()-1-i);
 			char ch1 =s[1].charAt(s[1].length()-1-i);
-			char ch2 =s[2].charAt(s[2].length()-1-i);
+			// char ch2 =s[2].charAt(s[2].length()-1-i);
 			
 			int y0 =(int)(ch0-48);
 			int y1 =(int)(ch1-48);
-			int y2 =(int)(ch2-48);
+			int y2 = y0 * y1;
 
 			System.out.print ("digit"+(i+1)+" "+y0+" "+y1+" "+y2+"\n");
 		
@@ -58,7 +58,7 @@ String s1=IntToBinary(num1);
 
 String s2=IntToBinary(num2);
 
-String s [] = {s1, s2, s1};
+String s [] = {s1, s2};
 
 display_output(s);
 /*System.out.println(s2);
